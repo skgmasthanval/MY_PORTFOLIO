@@ -1,0 +1,329 @@
+/* Importing Google Fonts for a modern look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Basic Styles with Background Image */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+    
+    /* Background image setup */
+    background-image: url('image11.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f0f2f5;
+}
+
+/* Semi-transparent overlay for readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.783); /* A lighter overlay for better text visibility */
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Header & Navigation */
+header {
+    background: rgba(45, 52, 54, 0.95); /* Semi-transparent dark background */
+    color: #ffffff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    /* color: #fff; */
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Sections */
+section {
+    padding: 100px 0 50px 0;
+    margin-top: 60px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* About Section */
+.about-section {
+    /* background: #fff; */
+    padding: 80px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.about-text {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.tagline {
+    font-style: italic;
+    color: #6c757d;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    text-align: left;
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-right: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0077b5; /* Example hover color for LinkedIn */
+    transform: scale(1.1);
+}
+
+/* Skills Section */
+.skills-section {
+    /* background: #fdfdfd; */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.skill-category {
+    /* background: #fff; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    /* background-color: #ecf0f1; */
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Projects Section */
+.projects-section {
+    /* background: #fff; */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    /* background: #fdfdfd; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.project-card p.tools {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Contact Section */
+.contact-section {
+    background: #2c3e50;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text h1, .tagline, .social-links {
+        text-align: center;
+    }
+    .about-text {
+        padding-right: 0;
+    }
+    nav ul {
+        display: none;
+    }
+}
